@@ -1,9 +1,12 @@
-// Script to optimize HTML files for better performance
-// - Add IDs to h2, h3, and h4 tags
-// - Replace external stylesheet links with inline styles
-// - Minify the HTML
-// This script is run automatically by Vercel when deploying the site
-// Straffe Sites - https://straffesites.com/en
+/*
+Optimize HTML files for better performance by:
+    * Adding IDs to h2, h3, and h4 tags
+    * Replacing external stylesheet links with inline styles
+    * Minifying the HTML
+This script is run automatically by Vercel during site deployment
+Developed by Straffe Sites - https://straffesites.com/en
+Based on Igloczek's inline-styles.mjs script - https://gist.github.com/Igloczek/2e8f5596490bc56eda1486e5ed8f4a07
+*/
 
 import fs from 'node:fs/promises'
 import { globby } from 'globby'
@@ -12,8 +15,7 @@ import { JSDOM } from 'jsdom'
 
 console.log('Optimizing HTML files for better performance by Straffe Sites...')
 
-// Get all HTML files
-// Note: This assumes that the output directory is .vercel/output/static
+// Get all HTML files from the output directory
 const distPath = './.vercel/output/static'
 const files = await globby(`${distPath}/**/*.html`)
 
