@@ -26,7 +26,7 @@ await Promise.all(
 
 		// Add IDs to h2, h3, and h4 tags
 		const dom = new JSDOM(html)
-		const headings = dom.window.document.querySelectorAll('h2, h3, h4')
+		const headings = dom.window.document.querySelectorAll('h1, h2, h3, h4')
 		for (let i = 0; i < headings.length; i++) {
 			const heading = headings[i]
 			const text = heading.textContent
