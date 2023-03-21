@@ -5,6 +5,7 @@ This repository includes an optimization script that improves the performance of
 - Adds IDs to h2, h3, and h4 tags
 - Replaces external stylesheet links with inline styles
 - Minifies the HTML
+- [Live demo at Vercel](https://astro-process-html.vercel.app/)
 
 ## Prerequisites
 

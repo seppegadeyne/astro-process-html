@@ -13,7 +13,7 @@ import { globby } from 'globby'
 import { minify } from 'html-minifier'
 import { JSDOM } from 'jsdom'
 
-console.log('Optimizing HTML files for better performance by Straffe Sites...')
+console.log('Optimizing HTML files for better performance...')
 
 // Get all HTML files from the output directory
 const distPath = './.vercel/output/static'
