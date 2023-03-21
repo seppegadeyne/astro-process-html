@@ -1,6 +1,6 @@
-# Astro Optimization Script
+# Astro Modify HTML Files After Build Script
 
-This repository includes an optimization script that improves the performance of your Astro-generated HTML files. The script performs the following tasks:
+This repository includes a script that modifies Astro-generated HTML files after the build. The script performs the following tasks:
 
 - Adds IDs to h2, h3, and h4 tags
 - Minifies the HTML
@@ -21,7 +21,7 @@ Ensure that you have the following dependencies installed:
 
 ```json
 {
-	"name": "",
+	"name": "astro-process-html",
 	"type": "module",
 	"version": "0.0.1",
 	"scripts": {
@@ -45,18 +45,18 @@ Ensure that you have the following dependencies installed:
 
 ## Usage
 
-The optimization script will run automatically after building the Astro project. To build and optimize your project, run the following command: `npm run build`. Your HTML files will now be optimized and ready for deployment.
+The script will run automatically after building the Astro project. To build and process your project, run the following command: `npm run build`. Your HTML files will now be processed and ready for deployment.
 
 ## Development
 
-During development, you can run the Astro development server using the following command: `npm run dev`. This will not run the optimization script, as it is only needed for production builds.
+During development, you can run the Astro development server using the following command: `npm run dev`. This will not run the script, as it is only needed for production builds.
 
 ## Preview
 
-To preview your optimized project, run the following command: `npm run preview`. This will serve your optimized production build locally.
+To preview your project, run the following command: `npm run preview`. This will serve your processed production build locally.
 
 ## Deployment
 
 For deployment, follow the standard deployment process for Astro projects. The optimization script will run automatically during the build process, so no additional steps are needed.
 
-This README.md file provides a guide for integrating the optimization script into an Astro project, including setup instructions and usage details.
+This README.md file provides a guide for integrating the script into an Astro project, including setup instructions and usage details.
