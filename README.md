@@ -3,7 +3,6 @@
 This repository includes an optimization script that improves the performance of your Astro-generated HTML files. The script performs the following tasks:
 
 - Adds IDs to h2, h3, and h4 tags
-- Replaces external stylesheet links with inline styles
 - Minifies the HTML
 - [Live demo at Vercel](https://astro-process-html.vercel.app/)
 
