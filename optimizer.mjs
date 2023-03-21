@@ -1,7 +1,8 @@
 /*
-Optimize HTML files for better performance by:
+Modify HTML files after the build process:
     * Adding IDs to h2, h3, and h4 tags
     * Minifying the HTML
+    * You can add custom scripts
 This script is run automatically by Vercel during site deployment
 Developed by Straffe Sites - https://straffesites.com/en
 */
@@ -11,7 +12,7 @@ import { globby } from 'globby'
 import { minify } from 'html-minifier'
 import { JSDOM } from 'jsdom'
 
-console.log('Optimizing HTML files for better performance...')
+console.log('Processing HTML files...')
 
 // Get all HTML files from the output directory
 const distPath = './.vercel/output/static'
