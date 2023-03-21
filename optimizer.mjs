@@ -1,11 +1,9 @@
 /*
 Optimize HTML files for better performance by:
     * Adding IDs to h2, h3, and h4 tags
-    * Replacing external stylesheet links with inline styles
     * Minifying the HTML
 This script is run automatically by Vercel during site deployment
 Developed by Straffe Sites - https://straffesites.com/en
-Based on Igloczek's inline-styles.mjs script - https://gist.github.com/Igloczek/2e8f5596490bc56eda1486e5ed8f4a07
 */
 
 import fs from 'node:fs/promises'
@@ -38,18 +36,6 @@ await Promise.all(
 			heading.setAttribute('id', id)
 		}
 		html = dom.serialize()
-
-		// Replace external stylesheet links with inline styles
-		const stylesheets = html.match(/<link rel="stylesheet" href="(.+?)" \/>/g)
-		if (stylesheets?.length > 0) {
-			await Promise.all(
-				stylesheets.map(async (stylesheet) => {
-					const stylePath = stylesheet.match(/^<link rel="stylesheet" href="(.+?)" \/>$/)[1]
-					const style = await fs.readFile(distPath + stylePath, 'utf-8')
-					html = html.replace(stylesheet, `<style>${style.trim()}</style>`)
-				})
-			)
-		}
 
 		// Minify the HTML
 		html = minify(html, {
