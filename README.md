@@ -1,55 +1,62 @@
-# Astro Starter Kit: Basics
+# Astro Optimization Script
 
+This repository includes an optimization script that improves the performance of your Astro-generated HTML files. The script performs the following tasks:
+
+- Adds IDs to h2, h3, and h4 tags
+- Replaces external stylesheet links with inline styles
+- Minifies the HTML
+
+## Prerequisites
+
+Ensure that you have the following dependencies installed:
+
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [Astro](https://astro.build/) (version 2.1.3 or higher)
+
+## Setup
+
+1. Place the `optimizer.mjs` file in your Astro project's root directory.
+
+2. Update your `package.json` file to include the necessary dependencies and scripts. Your `package.json` should look similar to the one below:
+
+```json
+{
+	"name": "",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build && node optimizer.mjs",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"devDependencies": {
+		"astro": "~2.1.3",
+		"@astrojs/vercel": "~3.2.1",
+		"globby": "~13.1.3",
+		"html-minifier": "~4.0.0",
+		"jsdom": "~21.0.0"
+	}
+}
 ```
-npm create astro@latest -- --template basics
-```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+1. Install the dependencies by running the following command: `npm install`.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Usage
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+The optimization script will run automatically after building the Astro project. To build and optimize your project, run the following command: `npm run build`. Your HTML files will now be optimized and ready for deployment.
 
+## Development
 
-## 🚀 Project Structure
+During development, you can run the Astro development server using the following command: `npm run dev`. This will not run the optimization script, as it is only needed for production builds.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Preview
 
-```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+To preview your optimized project, run the following command: `npm run preview`. This will serve your optimized production build locally.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Deployment
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+For deployment, follow the standard deployment process for Astro projects. The optimization script will run automatically during the build process, so no additional steps are needed.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This README.md file provides a guide for integrating the optimization script into an Astro project, including setup instructions and usage details.
