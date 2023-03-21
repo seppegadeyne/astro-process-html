@@ -10,7 +10,7 @@ This repository includes a script that modifies Astro-generated HTML files after
 
 Ensure that you have the following dependencies installed:
 
-- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [Node.js](https://nodejs.org/) (version 16.12.0 or higher)
 - [Astro](https://astro.build/) (version 2.1.3 or higher)
 
 ## Setup
