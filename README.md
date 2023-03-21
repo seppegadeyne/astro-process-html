@@ -15,7 +15,7 @@ Ensure that you have the following dependencies installed:
 
 ## Setup
 
-1. Place the `optimizer.mjs` file in your Astro project's root directory.
+1. Place the `process-html.mjs` file in your Astro project's root directory.
 
 2. Update your `package.json` file to include the necessary dependencies and scripts. Your `package.json` should look similar to the one below:
 
@@ -27,7 +27,7 @@ Ensure that you have the following dependencies installed:
 	"scripts": {
 		"dev": "astro dev",
 		"start": "astro dev",
-		"build": "astro build && node optimizer.mjs",
+		"build": "astro build && node process-html.mjs",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
